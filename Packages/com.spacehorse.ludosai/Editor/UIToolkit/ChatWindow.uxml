@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement class="chat-container">
+        <!-- Верхняя секция с настройками была удалена, так как настройки теперь в отдельном окне -->
+        <!-- 
+        <ui:VisualElement class="settings-container">
+            <ui:VisualElement class="api-key-container">
+                <ui:Label text="API Ключ OpenAI:" class="settings-label" />
+                <ui:TextField name="api-key-field" password="true" class="api-key-field" />
+                <ui:Button text="Сохранить" name="save-api-key-button" class="save-api-key-button" />
+            </ui:VisualElement>
+            
+            <ui:VisualElement class="model-container">
+                <ui:Label text="Модель LLM:" class="settings-label" />
+                <ui:DropdownField name="model-dropdown" class="model-dropdown" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        -->
+        
+        <!-- Секция ввода (будет перемещаться между верхом и низом) -->
+        <ui:VisualElement name="input-container" class="input-container" style="min-height: 120px; flex-shrink: 0; margin-bottom: 0;">
+            <ui:Label text="Your request:" class="input-label" />
+            <ui:TextField name="input-field" multiline="true" class="input-field" style="min-height: 60px; max-height: 120px;" />
+            <ui:Label text="Press Enter to send, Shift+Enter for new line" class="hint-label" style="margin-bottom: 2px;" />
+            <ui:VisualElement class="button-container" style="min-height: 30px; flex-shrink: 0; margin-top: 2px;">
+                <ui:Button text="Send" name="send-button" class="send-button" style="height: 30px;" />
+                <ui:Button text="Clear History" name="clear-button" class="clear-button" style="height: 30px;" />
+            </ui:VisualElement>
+            
+            <!-- Оверлей блокировки для Play Mode -->
+            <ui:VisualElement name="playmode-block-overlay" class="playmode-block-overlay" style="display: none;">
+                <ui:VisualElement class="playmode-block-content">
+                    <ui:Label text="!" class="playmode-block-icon" />
+                    <ui:Label text="Chat is locked in Play Mode" class="playmode-block-title" />
+                    <ui:Label text="Stop the game execution to continue working with the assistant" class="playmode-block-description" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        
+        <!-- Список сообщений чата -->
+        <ui:ListView name="chat-list" class="chat-list" />
+        
+        <!-- Индикатор загрузки -->
+        <ui:VisualElement name="processing-indicator" class="processing-indicator">
+            <ui:Label text="Generation" class="processing-label" />
+            <ui:Button text="Stop" name="stop-button" class="stop-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML> 

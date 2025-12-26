@@ -1,0 +1,20 @@
+{
+  "name": "com.spacehorse.ludosai",
+  "version": "1.0.0",
+  "displayName": "Ludos AI",
+  "description": "AI-powered development assistant for Unity. Create scripts, prefabs, scenes, UI and more using natural language commands. Supports multiple AI providers.",
+  "unity": "2021.3",
+  "author": {
+    "name": "Space Horse"
+  },
+  "keywords": [
+    "ai",
+    "tool",
+    "textmeshpro",
+    "json"
+  ],
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.nuget.newtonsoft-json": "3.0.2"
+  }
+}

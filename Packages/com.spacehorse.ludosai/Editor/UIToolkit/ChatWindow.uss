@@ -1,0 +1,280 @@
+/* Общие стили для контейнера */
+.chat-container {
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+}
+
+/* Стили для секции настроек */
+.settings-container {
+    flex-direction: column;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.api-key-container {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+    flex-shrink: 0;
+}
+
+.settings-label {
+    min-width: 120px;
+    font-size: 14px;
+    -unity-font-style: bold;
+}
+
+.api-key-field {
+    flex-grow: 1;
+    margin-right: 5px;
+}
+
+.save-api-key-button {
+    width: 80px;
+}
+
+.model-container {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+    flex-shrink: 0;
+}
+
+.model-dropdown {
+    flex-grow: 1;
+}
+
+/* Стили для списка сообщений */
+.chat-list {
+    flex-grow: 1;
+    background-color: rgb(50, 50, 50);
+    border-width: 1px;
+    border-color: rgb(100, 100, 100);
+    border-radius: 3px;
+    margin-bottom: 5px;
+    max-height: 85%;
+}
+
+/* Стили для сообщений */
+.message-container {
+    flex-direction: column;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    min-height: 80px;
+}
+
+.user-message {
+    background-color: rgb(102, 102, 102);
+    margin-left: 20px;
+}
+
+.agent-message {
+    background-color: rgb(0, 0, 0);
+    margin-right: 20px;
+}
+
+.system-message {
+    background-color: rgb(0, 15, 100);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-style: italic;
+}
+
+.code-message {
+    background-color: rgb(32, 32, 32);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.message-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.sender-label {
+    -unity-font-style: bold;
+    color: rgb(230, 230, 230);
+    font-size: 14px;
+}
+
+.time-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.message-content {
+    white-space: normal;
+    padding: 5px;
+    color: rgb(230, 230, 230);
+    font-size: 14px;
+}
+
+.code-block {
+    white-space: normal;
+    padding: 5px;
+    color: rgb(0, 255, 0);
+    font-family: monospace;
+    -unity-font-style: normal;
+    font-size: 14px;
+    background-color: rgb(20, 20, 20);
+    border-radius: 3px;
+}
+
+.loading-message {
+    color: rgba(255, 255, 255, 0.7);
+    -unity-font-style: italic;
+    font-size: 14px;
+}
+
+.copy-button {
+    align-self: flex-end;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    margin-top: -24px;
+    margin-right: 2px;
+    color: white;
+}
+
+/* Стили для индикатора загрузки */
+.processing-indicator {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(70, 70, 100);
+    border-radius: 3px;
+    padding: 6px;
+    margin-bottom: 3px;
+    flex-shrink: 0;
+}
+
+.processing-label {
+    -unity-font-style: bold;
+    color: white;
+    font-size: 14px;
+}
+
+.stop-button {
+    width: 60px;
+    background-color: rgb(50, 50, 70);
+    color: white;
+}
+
+/* Стили для секции ввода */
+.input-container {
+    flex-direction: column;
+    flex-shrink: 0;
+    min-height: 120px;
+    margin-bottom: 0;
+}
+
+.input-label {
+    -unity-font-style: bold;
+    margin-bottom: 1px;
+    font-size: 14px;
+}
+
+.input-field {
+    min-height: 60px;
+    max-height: 120px;
+    margin-bottom: 1px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.hint-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2px;
+}
+
+.button-container {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-shrink: 0;
+    min-height: 30px;
+    margin-top: 2px;
+}
+
+.send-button {
+    flex-grow: 1;
+    height: 30px;
+    margin-right: 5px;
+    background-color: rgb(0, 100, 200);
+    color: white;
+    -unity-font-style: bold;
+    font-size: 14px;
+}
+
+.clear-button {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(50, 50, 70);
+    color: white;
+    font-size: 14px;
+}
+
+/* Стили для оверлея блокировки Play Mode */
+.playmode-block-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(45, 45, 45);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-width: 1px;
+    border-color: rgb(90, 90, 90);
+}
+
+.playmode-block-content {
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 0;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.playmode-block-icon {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(240, 240, 240);
+    background-color: rgb(80, 80, 80);
+    border-radius: 12px;
+    width: 24px;
+    height: 24px;
+    -unity-text-align: middle-center;
+    margin-bottom: 8px;
+    align-self: center;
+}
+
+.playmode-block-title {
+    font-size: 15px;
+    -unity-font-style: bold;
+    color: rgb(220, 220, 220);
+    margin-bottom: 10px;
+    -unity-text-align: middle-center;
+}
+
+.playmode-block-description {
+    font-size: 12px;
+    color: rgb(180, 180, 180);
+    -unity-text-align: middle-center;
+    white-space: normal;
+    line-height: 1.2;
+} 
