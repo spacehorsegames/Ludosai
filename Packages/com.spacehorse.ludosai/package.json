@@ -1,6 +1,6 @@
 {
   "name": "com.spacehorse.ludosai",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "displayName": "Ludos AI",
   "description": "AI-powered development assistant for Unity. Create scripts, prefabs, scenes, UI and more using natural language commands. Supports multiple AI providers.",
   "unity": "2021.3",
